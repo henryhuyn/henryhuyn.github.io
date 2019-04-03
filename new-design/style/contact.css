@@ -1,0 +1,1101 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+            /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            [                                                            ]
+            [                      MAIN STYLE CSS/ MOBILE                ]
+            [                                                            ]
+            ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+*, :after, *:before {
+    box-sizing: border-box;
+}
+
+html{
+        font-family: "Avenir Next", "Avenir", sans-serif;
+        font-size: 1em;
+        color: #626262;
+}
+
+body{
+        background: #191C2B;
+        margin: 0 auto;
+        padding: 0;
+}
+
+img{
+        max-width: 100%;
+        max-height: 100%;
+}
+
+
+                /*-------------------- THIS IS HEADER AREA --------------------*/
+
+.logo{
+        display: block;
+        width: 180px;
+        height: auto;
+        margin: 0 auto;
+        z-index: 1;
+        margin-top: 20px; 
+}
+
+.flare{
+        margin: 0 auto;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        background-color: transparent !important;
+        z-index: -999;
+        box-shadow: 0 1em 2em 3em rgba(255, 50, 0, 0.5),
+                    4em 0em 2em 2em rgba(155, 50, 0, 0.6),
+                    -4em -2em 2em 2em rgba(255, 0, 150, 0.5),
+                    -4em 2em 2em 4em rgba(0, 0, 150, 0.5),
+                    0 -3em 2em 3em rgba(120, 250, 0, 0.5),
+                    2em -1em 2em 2em rgba(50, 10, 200, 0.5);
+        animation: mix 5s linear infinite;
+}
+
+nav ul{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 20px;
+        z-index: 1;
+   
+    
+}
+nav ul li{
+        list-style: none;
+        width: 130px;
+        height: 40px;
+        padding: 10px;
+        text-align: center;
+        margin-bottom: 10px;
+        position:relative;
+       
+}
+
+nav ul li a{
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: 200;
+}
+
+nav ul li a:hover{
+        color: aquamarine;
+}
+
+nav ul li:nth-child(6):before{
+        content: "";
+        position: absolute;
+        left: 10%;
+        bottom: 10%;
+        height: 3px;
+        width: 3px;
+        bottom:20px;
+        left: 30%;
+        background: white;
+        border-radius: 50%;
+        animation: fairydust 4s infinite;
+        animation-delay: 1s;
+    
+}
+
+nav ul li:nth-child(6):after{
+        content: "";
+        position: absolute;
+        height: 4px;
+        width: 4px;
+        bottom:20px;
+        right: 20%;
+        background: white;
+        border-radius: 50%;
+        animation: fairydust 4s infinite;
+
+}
+
+
+nav ul li:nth-child(6) a:before{
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 3px;
+        bottom: 20px;
+        right: 40%;
+        background: white;
+        border-radius: 50%;
+        animation: fairydust 4s infinite;
+        animation-delay: 1s;
+    
+}
+
+nav ul li:nth-child(6) a:after{
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 3px;
+        bottom: 20px;
+        left: 50%;
+        background: white;
+        border-radius: 50%;
+        animation: fairydust 3s infinite;
+
+}
+
+nav ul li:nth-child(6) a{
+        color: aquamarine;
+}
+
+nav ul li:hover:before{
+        content: "";
+        position: absolute;
+        left: 10%;
+        bottom: 10%;
+        height: 3px;
+        width: 3px;
+        bottom:20px;
+        left: 30%;
+        background: white;
+        border-radius: 50%;
+        animation: fairydust 4s infinite;
+        animation-delay: 1s;
+    }
+
+nav ul li:hover:after{
+        content: "";
+        position: absolute;
+        height: 4px;
+        width: 4px;
+        bottom:20px;
+        right: 20%;
+        background: white;
+        border-radius: 50%;
+        animation: fairydust 4s infinite;
+    }
+
+nav ul li a:hover:before{
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 3px;
+        bottom: 20px;
+        right: 40%;
+        background: white;
+        border-radius: 50%;
+        animation: fairydust 4s infinite;
+        animation-delay: 1s;
+    }
+
+nav ul li a:hover:after{
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 3px;
+        bottom: 20px;
+        left: 50%;
+        background: white;
+        border-radius: 50%;
+        animation: fairydust 3s infinite;
+    }
+
+                /*-------------------- THIS IS BANNER AREA --------------------*/
+
+.banner{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 200px;
+        justify-content: flex-start;
+}
+
+.text{
+        box-sizing: border-box;
+         /*border-left: solid .5px white; */
+        padding: 10px;
+        z-index: 2;
+        position: relative;
+        left: 5%; 
+}
+.text h1{
+        color: white;
+        font-size: 2rem;
+        font-weight: 100;
+        margin-bottom: 10px;
+}
+
+.text h2{
+        color: aqua;
+        font-size: 1.5rem;
+}
+
+.text h3{
+        font-size: 5rem;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: white;
+        color: white;
+        font-weight: bolder;
+        color: rgba(225,225,225, .01);
+        background-image: url("../img/main-banner-3.png");
+        background-repeat: repeat;
+        -webkit-background-clip:text;
+        animation: main-text 30s ease-in-out infinite;
+}
+
+
+            /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            [                                                         ]
+            [                     MAIN BANNER WRAP ANIMATION          ]
+            [                                                         ]
+            :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+           .wrapper {
+              position: absolute;
+              top: 50%;
+              left: 0;
+              width: 100%;
+              height: 300px;
+              margin-top: -100px;
+              overflow: hidden;
+                z-index: -9;
+                
+            }
+
+            .flyup {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              z-index: 1;
+            }
+            .flyup li {
+              position: absolute;
+              list-style: none;
+              display: block;
+              width: 40px;
+              height: 40px;
+              background-color: crimson;
+              bottom: -100px;
+              animation: twist 5s infinite;
+              transition-timing-function: linear;
+            }
+
+            .flyup li:nth-child(1) {
+              left: 10%;
+            }
+
+            .flyup li:nth-child(2) {
+              left: 20%;
+              width: 40px;
+              height: 40px;
+              animation-delay: 2s;
+              animation-duration: 4s;
+            }
+
+            .flyup li:nth-child(3) {
+              left: 25%;
+              animation-delay: 4s;
+            }
+
+            .flyup li:nth-child(4) {
+              left: 40%;
+              width: 60px;
+              height: 60px;
+              box-sizing: border-box;
+             
+              animation-duration: 4s;
+             
+            }
+            .flyup li:nth-child(5) {
+              left: 40%;
+            }
+
+
+            .flyup li:nth-child(6) {
+              left: 60%;
+              width: 40px;
+              height: 40px;
+              animation-delay: 3s;
+              background-color: darkviolet;
+            }
+            .flyup li:nth-child(7) {
+              left: 32%;
+              width: 60px;
+              height: 60px;
+              animation-delay: 7s;
+            }
+
+            .flyup li:nth-child(8) {
+              left: 55%;
+              width: 20px;
+              height: 20px;
+              animation-delay: 10s;
+              animation-duration: 10s;
+            }
+
+            .flyup li:nth-child(9) {
+              left: 25%;
+              width: 10px;
+              height: 10px;
+              animation-delay: 2s;
+              animation-duration: 3s;
+              background-color:brown;
+            }
+
+            .flyup li:nth-child(10) {
+              left: 80%;
+              width: 50px;
+              height: 50px;
+              animation-delay: 8s;
+            }
+
+            /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            [                                                         ]
+            [                      ANIMATION AREA             ]
+            [                                                         ]
+            ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+            @keyframes fairydust {
+            
+            25%{
+                transform: translateY(-20px) scale(0.5);  
+            }
+            
+            50%{
+                transform: translateY(0px) scale(0.5);
+            }
+            
+            100% {
+                transform: translateY(-40px) scale(0.5);
+                opacity: 0.5;
+                animation-timing-function: ease-in;
+                }
+            }
+
+
+            @keyframes mix {
+
+            30% {
+                box-shadow: 0 -1em 2em 3em rgba(255, 0, 200, 0.5),
+                            4em -1em 2em 3em rgba(255, 50, 0, 0.8),
+                            -4em 2em 3em 2em rgba(155, 200, 0, 0.5),
+                            -4em -2em 2em 2em rgba(200, 0, 150, 0.6),
+                            0 3em 2em 2em rgba(20, 250, 0, 0.5),
+                            2em 1em 2em 2em rgba(50, 10, 250, 0.5);
+              }
+
+              60% {
+                box-shadow: 2em 1em 2em 3em rgba(55, 0, 200, 0.5),
+                            3em 1em 2em 3em rgba(25, 150, 0, 0.6),
+                            3em -2em 3em 3em rgba(155, 200, 0, 0.5),
+                            -4em 2em 2em 3em rgba(200, 0, 50, 0.6),
+                            0 -3em 2em 3em rgba(200, 250, 0, 0.5),
+                            -2em 1em 2em 3em rgba(50, 210, 250, 0.6);
+              }
+            }
+
+
+
+            @keyframes twist {
+             100% {
+                -webkit-transform: translateY(-350px) scale(0.5);
+                transform: translateY(-350px) scale(0.5);
+                opacity: 0;
+                -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+            }
+            }
+
+            @keyframes main-text {
+                0%, 100% {
+                  background-position: left top;
+                }
+                25%{
+                  background-position: right bottom;
+                 }
+                50% {
+                  background-position: left bottom;
+                }
+                75% {
+                  background-position: right top;
+                }   
+            }
+
+
+
+            /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            [                                                         ]
+            [                      END OF ANIMATION CODE              ]
+            [                                                         ]
+            ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+
+.social-menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+}
+
+.social-menu ul li{
+        color: white;
+        font-size: 1.3rem;
+        margin-left: 15px;
+        display: inline-block;
+   
+}
+
+
+.social-menu ul li:hover{
+        color: aquamarine;
+   
+}
+
+.social-menu ul li a{
+        color: white;
+}
+
+.social-menu ul li a:visited{
+        color: aqua;
+}
+
+/*-------------------- THIS IS CONTACT FORM--------------------*/
+.main-content{
+        width: 90%;
+        display: block;
+        margin: 0 auto;
+}
+ 
+.foto{
+        display: none;
+}
+ 
+.texts{
+        display: none;
+}
+ 
+.texts h4{
+      font-size: 1.2em;
+      color: white;
+}
+ 
+.lnr-map-marker{
+      color: white;
+      font-size: 20px;
+}
+.contactform{
+      height: auto;
+      width: 90%;
+      margin: 0 auto;
+      padding: 30px; 
+      background-color:#1f2231;
+
+}
+ 
+.contactform h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: white;
+    font-weight: 200;
+    
+}
+ 
+label{
+    font-size: 1em;
+    color: cyan;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    width: 80%;
+    display: inline-block;
+}
+ 
+input{
+    width: 80%;
+    height: 40px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px dashed gray; 
+    display: block;
+    color: aliceblue;  
+}
+ 
+ 
+input:hover{
+    background: transparent;
+    border-bottom: 1px dashed aliceblue;
+    color: darkcyan;
+}
+ 
+::placeholder{
+    color: aliceblue;
+    font-weight: 200;
+    font-size: 1.2em;
+}
+ 
+textarea{
+    min-width: 300px;
+    min-height: 250px;
+    max-height: 260px;
+    max-width: 320px;
+    border: 1px dashed gray;
+    background: transparent;
+    margin-top: 10px;
+    margin-left: 30px;
+    color:aliceblue;
+    font-size: 1.1em;
+    font-weight: 200;
+     
+}
+ 
+textarea:hover{
+    background: transparent;
+    border-bottom: 1px dashed darkcyan;
+}
+ 
+input:focus, textarea:focus{
+    outline: none;
+}
+ 
+.sub{
+    display: block;
+     
+}
+ 
+#button-1{
+    width: 80px;
+    height: 30px;
+    background-color:aquamarine;
+    color: darkcyan;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    margin: 10px 0 10px 30px;
+ 
+}
+ 
+#button-1:hover{
+    background-color:aqua;
+}
+ 
+
+/*-------------------- THIS IS FOOTER CONTENT --------------------*/
+
+.footer-content{
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        background: #191C2B;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        border-top: solid .2px grey;
+        padding-top: 20px;
+    
+}
+
+.footer-content ul{
+        margin: 0 auto;
+        text-align: center;
+}
+.footer-content ul li{
+        display: inline-block;
+        box-sizing: border-box;
+        margin-right: 10px;
+        padding: 10px;
+        margin-top: 20px;
+        font-family: "Avenir Next", "Avenir", sans-serif;
+        font-weight: 200;
+        font-size: .7em;
+    
+
+}
+
+.footer-content ul li a{
+        color: white;
+        font-size: 1.2rem;
+        text-decoration: none;
+}
+
+.footer-logo{
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+
+}
+
+.copy-right p{
+        font-family: "Avenir Next", "Avenir", sans-serif;
+        font-weight: 200;
+        text-align: center;
+        font-size: 1em;
+        padding: 20px;
+        color: white;
+   
+}
+
+.subcribe{
+        margin: 0 auto;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        padding: 10px;
+
+}
+
+.subcribe input[type="email"]{
+        width: 200px;
+        height: 30px;
+        font-size: 1rem;
+        background: transparent;
+        border: .2px solid white;
+    
+}
+
+.subcribe input::placeholder{
+        color: white;
+        text-align: center;
+        font-family: "Avenir Next", "Avenir", sans-serif;
+        font-weight: 200;
+    
+}
+
+.subcribe input[type="submit"]{
+        width: 90px;
+        height: 30px;
+        background: red;
+        color: white;
+        font-family: "Avenir Next", "Avenir", sans-serif;
+        font-weight: 400;
+        font-size: .8em;
+        text-transform: uppercase;
+        border: none;
+}
+
+.quick-links{
+        display: none;
+}
+
+.back-top{
+        width: 50px;
+        height: 50px;
+        display: block;
+        background: crimson;
+        position: fixed;
+        right: 10px;
+        bottom: 20px;
+        z-index: 99;
+        opacity: .6;
+        cursor: pointer;
+        text-align: center;
+        padding: 15px;
+}
+
+.back-top:hover{
+        opacity: 1;
+}
+
+.back-top a:after{
+        content: "\f0aa";
+        font-family: "Font Awesome 5 Free"; 
+        font-size: 1.2rem;
+        font-weight: 900; 
+        color: white;
+        margin-right: 10px;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        display: inline-block;
+        cursor: pointer;
+        -webkit-font-smoothing: antialiased;
+   
+}
+
+
+            /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            [                                                         ]
+            [                      THIS IS TABLET                     ]
+            [                                                         ]
+            :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+@media screen and (min-width: 768px){
+   
+.text{
+  left: 5%;
+}
+    
+.text h1{
+    font-size: 2rem;
+}
+    
+.text h2{
+    font-size: 1.4rem;
+}
+    
+.text h3{
+    font-size: 5rem;
+}
+    
+    
+.social-menu{
+        position: fixed;
+        right: 1%;
+        width: 30px;
+        height: auto;
+        display: block;
+
+    }
+    
+.social-menu ul i{
+        margin-bottom: 20px;
+    }
+    
+.footer-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+
+}
+
+.footer-logo{
+    width: 100px;
+    height: auto;
+}
+    
+.footer-menu ul li{
+    display: block;
+    text-align: left;
+    margin-bottom: 2px;
+}
+  
+.footer-menu ul li a{
+    font-size: 1rem;
+}
+.subcribe input{
+    display: block;
+    margin-bottom: 5px;
+        
+}
+     
+.subcribe input[type="email"]{
+    width: 250px;
+        
+}
+ 
+.quick-links{
+    display: block;
+    margin: 0 auto;
+       
+}
+    
+.quick-links ul li{
+    display: block;
+    text-align: left;
+    margin-bottom: 2px;
+    padding: 5px;
+       
+}
+    
+.quick-links ul li a{
+    font-size: 1rem;
+        
+}
+    
+    .footer-menu ul li:first-child:before{
+    font-family: "Font Awesome 5 Free"; 
+    font-size: 1rem;
+    font-weight: 900; 
+    content: "\f406";
+    color: white;
+    margin-right: 10px;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    }
+    
+    .footer-menu ul li:nth-child(2):before{
+    font-family: "Font Awesome 5 Free"; 
+    font-size: 1rem;
+    font-weight: 900; 
+    content: "\f0e0";
+    color: white;
+    margin-right: 10px;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    }
+    
+    .footer-menu ul li:nth-child(3):before{
+    font-family: "Font Awesome 5 Free"; 
+    font-size: 1rem;
+    font-weight: 900; 
+    content: "\f024";
+    color: white;
+    margin-right: 10px;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    }
+    
+    .footer-menu ul li:nth-child(4):before{
+    font-size: 1rem;
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f29a";
+    color: white;
+    margin-right: 10px;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    }
+    
+    .quick-links ul li:first-child:before{
+    font-family: "Font Awesome 5 Free"; 
+    font-size: 1rem;
+    font-weight: 900; 
+    content: "\f466";
+    color: white;
+    margin-right: 10px;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    }
+    
+    .quick-links ul li:nth-child(2):before{
+    font-family: "Font Awesome 5 Free"; 
+    font-size: 1rem;
+    font-weight: 900; 
+    content: "\f083";
+    color: white;
+    margin-right: 10px;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    }
+    
+    .quick-links ul li:nth-child(3):before{
+    font-family: "Font Awesome 5 Free"; 
+    font-size: 1rem;
+    font-weight: 900; 
+    content: "\f03d";
+    color: white;
+    margin-right: 10px;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    }
+    
+    .quick-links ul li:nth-child(4):before{
+    font-family: "Font Awesome 5 Free"; 
+    font-size: 1rem;
+    font-weight: 900; 
+    content: "\f009";
+    color: white;
+    margin-right: 10px;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    }
+    
+    .quick-links ul li:nth-child(5):before{
+    font-family: "Font Awesome 5 Free"; 
+    font-size: 1rem;
+    font-weight: 900; 
+    content: "\f304";
+    color: white;
+    margin-right: 10px;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    }
+    
+    .quick-links ul li:nth-child(6):before{
+    font-family: "Font Awesome 5 Free"; 
+    font-size: 1rem;
+    font-weight: 900; 
+    content: "\f234";
+    color: white;
+    margin-right: 10px;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    }
+
+/*-------------------- THIS IS CONTACT FORM TABLET--------------------*/
+
+ 
+.main-content{
+      width: 90%;    
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1px;
+      margin: 0 auto; 
+      margin-top: 20px;
+ 
+}
+    
+.foto{
+    visibility: visible;
+    display: block;
+    }  
+     
+.texts{
+    visibility: visible;
+    display: block;
+    }
+     
+     
+.foto{
+      height: 90%;
+      background-repeat: repeat;
+      margin-top: 25px;
+      background-position: center;
+      position: relative;
+      z-index: 1;
+      padding: 30px 15px 0px 15px;
+      border: 1px solid white;
+}
+ 
+.foto:before{
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(0,0,0,0.4);
+}
+    
+.foto h4{
+     font-weight: 300;
+}
+     
+ .foto img{
+     object-fit: fill;
+}
+ 
+.texts{
+    position: absolute;
+    margin: 0 auto;
+    top: 40%;
+    left: 5%;
+    color: white;
+    line-height: 2.5rem;
+    font-weight: 200;
+    padding: 15px;
+    background: rgb(255,255,255,0.2)
+}
+
+texterea{
+    min-width: 330px;
+    min-height: 280px;
+    max-height: 320px;
+    max-width: 350px;
+}
+
+}
+
+            /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            [                                                         ]
+            [                      THIS IS DESKTOP                    ]
+            [                                                         ]
+            :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+
+@media screen and (min-width: 1440px){
+
+.text{
+    margin-top: 40px;
+}
+    
+.texts{
+    left: 20%;
+}
+       
+texterea{
+    min-width: 360px;
+    min-height: 320px;
+    max-height: 400px;
+    max-width: 450px;
+}
+    
+}
+
+
+
+
+

@@ -1,0 +1,1280 @@
+/* 
+    CSS RESET
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+            /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            [                                                            ]
+            [                      FOR MOBILE RESPONSIVE                 ]
+            [                                                            ]
+            ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+
+
+*, :after, *:before {
+    box-sizing: border-box;
+}
+
+body{
+    background: #fff;
+    color: white;
+    margin: 0 auto;
+    padding: 0;
+    font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: #232323;
+    transition: color 0.3s ease;
+}
+
+a:hover{
+    color: coral;
+}
+
+.desktop-menu{
+    display: none;
+}
+.hambugermenu{
+    display: block;
+    position: relative;
+    top: 20px;
+    left: 10px;
+    padding: 5px;
+    z-index: 1;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.hambugermenu input{
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+     -webkit-touch-callout: none;
+}
+
+
+.hambugermenu span{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin-bottom: 3px;
+    position: relative;
+    background: #343638;
+    border-radius: 6px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+.hambugermenu span:first-child{
+    transform-origin: 0% 0%;
+}
+
+.hambugermenu span:nth-last-child(2){
+    transform-origin: 0% 100%;
+}
+
+.hambugermenu input:checked ~ span{
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px,-1px);
+    background: #232323;
+}
+
+.hambugermenu input:checked ~ span:nth-last-child(2){
+    transform: rotate(-45deg) translate(0px,-1px);
+}
+
+
+.hambugermenu input:checked ~ span:nth-last-child(3){
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+
+.hide-menu{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 100%;
+    height: auto;
+    margin: -80px 0 0 -15px;
+    padding-top: 100px;
+    background: #ededed;
+    list-style-type: none;
+    font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform .5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+
+.hide-menu li{
+    padding: 10px 0;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    text-align: left;
+    
+}
+
+.hambugermenu input:checked ~ ul{
+    transform: none;
+}
+
+.hide-menu li:nth-child(2):before{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f015";
+    color: #232323;
+    margin-right: 70px;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    display: inline-block;
+    font-family: "Font Awesome 5 Free"; 
+    -webkit-font-smoothing: antialiased;
+}
+
+
+.hide-menu li:nth-child(3):before{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f406";
+    color: #232323;
+    margin-right: 70px;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    display: inline-block;
+    font-family: "Font Awesome 5 Free"; 
+    -webkit-font-smoothing: antialiased;
+}
+
+
+.hide-menu li:nth-child(4):before{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f559";
+    color: #232323;
+    margin-right: 70px;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    display: inline-block;
+    font-family: "Font Awesome 5 Free"; 
+    -webkit-font-smoothing: antialiased;
+}
+
+
+.hide-menu li:nth-child(5):before{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f083";
+    color: #232323;
+    margin-right: 70px;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    display: inline-block;
+    font-family: "Font Awesome 5 Free"; 
+    -webkit-font-smoothing: antialiased;
+}
+
+
+.hide-menu li:nth-child(6):before{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f0e0";
+    color: #232323;
+    margin-right: 70px;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    display: inline-block;
+    font-family: "Font Awesome 5 Free"; 
+    -webkit-font-smoothing: antialiased;
+}
+
+.menu-bottom{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-self: center;
+    margin-top: 40px;
+}
+
+
+.menu-bottom i{
+    padding: 20px;
+    font-size: 1.2em;
+    color: #0E4460;
+   
+}
+.logo{
+    display: block;
+    position: relative;
+    align-self: center;
+}
+
+
+.hide-menu p{
+    color: #232323;
+    text-align: center;
+    margin-top: 30px;
+    line-height: 1.5em;
+}
+
+
+
+.center-logo{
+    display: block;
+    position: relative;
+    top: 2%;
+    transform: perspective(1px) translateX(42%) translateY(-25%);
+    
+   
+}
+
+.search-top input{
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 30px;
+    top: 5%;
+    height: auto;
+    border: none;
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 600;
+    font-size: .7em;
+    color: #232323;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+        
+}
+
+
+
+.banner{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    position: relative;
+    z-index: -9;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    
+}
+
+.banner img{
+    object-fit: contain;
+  
+}
+    
+
+
+.banner-content{
+    display: block;
+    width: 90%;
+    position: absolute;
+    z-index: 2;
+    color: #fff;
+    top: 15%;
+    align-self: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.banner-content h1{
+    font-family: 'Arapey', serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.banner-content p{
+    font-family:"Helvetica Neue";
+    font-weight: 250;
+    font-size: 1em;
+    line-height: 1.2rem;
+    text-align: center;
+    
+}
+
+.call-action{
+    display: inline-block;
+    position: absolute;
+    top: 65%;
+    text-align: center;
+    align-self: center;
+
+}
+
+.call-action button{
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    border: none;
+    font-family: "Avenir Next", "Avenir", sans-serif;
+    font-size: .7rem;
+    
+}
+
+.banner button:first-child{
+    background: #DE2E2D;
+    color: #fff;
+    margin-right: 5px;
+}
+
+
+.banner > button:first-child:hover{
+    color: yellow;
+    background: coral;!important;
+}
+
+.call-action button:nth-child(2):hover{
+    background: #DE2E2D;
+    color: #fff;
+}
+
+.main-content{
+    display: block;
+    margin: 0 auto;
+    width: 95%;
+    overflow: hidden;
+  
+}
+
+.heading-1,
+.heading-2,
+.content-1{
+    box-sizing: border-box;
+    border: solid .5px grey;
+    margin: 0 auto;
+    padding: 15px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+
+.box-1, .box-2, .box-3, .box-4, .box-5{
+    box-sizing: border-box;
+    border: solid .5px white;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.subtitle{
+    align-self: center;
+    width: 80%;
+    background: rgb(255,255,255,0.5);
+    padding: 40px;
+    position: absolute;
+    left: -80%;
+    
+}
+
+.box-1:hover .subtitle{
+    left: 10%;
+    transition-duration:  500ms;
+    overflow: visible;
+
+}
+
+.box-2:hover .subtitle{
+    left: 10%;
+    transition-duration:  500ms;
+    overflow: visible;
+
+}
+
+
+.box-3:hover .subtitle{
+    left: 10%;
+    transition-duration:  500ms;
+    overflow: visible;
+
+}
+
+.box-4:hover .subtitle{
+    left: 10%;
+    transition-duration:  500ms;
+    overflow: visible;
+
+}
+.subtitle h1{
+    font-family: 'Arapey', serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: black;
+    margin-bottom: 10px;
+    font-style: italic;
+    line-height: 25px;
+}
+
+.subtitle p{
+    font-family: "Avenir Next", "Avenir", sans-serif;
+    font-size: 1rem;
+    color: black;
+    line-height: 25px;
+    text-align: justify;
+    
+}
+.feature h1,
+.heading-1 h1,
+.heading-2 h1{
+    font-family: 'Arapey', serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 10px;
+    font-style: italic;
+    line-height: 25px;
+}
+.feature h1{
+    text-align: center;
+}
+.heading-1 h2,
+.heading-2 h2,
+.content-1 h2{
+    font-family: 'Arapey', serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: grey;
+    margin-bottom: 5px;
+    font-style: italic;
+    line-height: 20px;
+}
+
+.heading-1 p,
+.heading-2 p,
+.content-1 p{
+    font-family: "Avenir Next", "Avenir", sans-serif;
+    font-size: 1rem;
+    color: #626262;
+    line-height: 25px;
+    text-align: justify;
+    
+}
+
+
+
+
+
+
+
+/* ------- THIS IS FOOTER STYLE ------------ */
+
+footer{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background: #0E4460;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+
+footer ul{
+    margin: 0 auto;
+    text-align: center;
+}
+footer ul li{
+    display: inline-block;
+    box-sizing: border-box;
+    margin-right: 10px;
+    padding: 10px;
+    margin-top: 20px
+    font-family: "Avenir Next", "Avenir", sans-serif;
+    font-weight: 200;
+    font-size: .7em;
+
+}
+
+footer ul li a{
+     color: white;
+}
+
+.footer-logo img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin: 0 auto;
+
+}
+
+footer p{
+    font-family: "Avenir Next", "Avenir", sans-serif;
+    font-weight: 200;
+    text-align: center;
+    font-size: .7em;
+    padding: 20px;
+   
+}
+
+.subcribe{
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 10px;
+    
+    
+}
+
+.subcribe input[type="email"]{
+    width: 200px;
+    height: 30px;
+    background: transparent;
+    border: .2px solid white;
+    
+}
+
+.subcribe input::placeholder{
+    color: white;
+    text-align: center;
+    font-family: "Avenir Next", "Avenir", sans-serif;
+    font-weight: 200;
+    
+}
+
+.subcribe input[type="submit"]{
+    width: 90px;
+    height: 30px;
+    background: red;
+    color: white;
+    font-family: "Avenir Next", "Avenir", sans-serif;
+    font-weight: 400;
+    font-size: .8em;
+    text-transform: uppercase;
+    border: none;
+}
+
+            /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            [                                                            ]
+            [                      FOR TABLET RESPONSIVE                 ]
+            [                                                            ]
+            ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+@media screen and (min-width: 768px){
+    
+  .main-content{
+        width: 90%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 300px);
+        grid-gap: 5px;
+        grid-template-areas: 
+        "head1 head1 head2"
+        "main1 main1 main2"
+        "main3 main3 main4"
+        "foot1 foot1 foot2";
+    }   
+    
+    .heading-1{
+        grid-area: head1;
+        padding: 45px 20px 40px 20px;
+        height: 300px;
+    }
+    
+    .content-1{
+        grid-area: head2;
+        overflow: hidden;
+        padding: 20px 20px 10px 20px;
+
+    }
+    
+    .box-1{
+        grid-area: main1;
+        padding: 0;
+     
+        
+    }
+    
+    .box-2{
+        grid-area: main2;
+        padding: 0;
+        
+        
+    }
+    
+    .heading-2{
+        grid-area: main3;
+        height: 300px;
+        padding: 45px 20px 40px 20px;
+    }
+    
+    .box-3{
+        grid-area: main4;
+        padding: 0;
+        height: 300px;
+    }
+    
+    .box-4{
+        grid-area: foot1;
+        padding: 0;
+        height: 300px;
+    }
+    
+    .box-5{
+        grid-area: foot2;
+        padding: 0;
+        height: 300px;
+    }
+    
+    .feature h1,
+    .heading-1 h1,
+    .heading-2 h1{
+        font-size: 1.2em;
+    }
+  
+    .heading-1 h2,
+    .heading-2 h2,
+    .content-1 h2{
+       
+        line-height: 18px;
+    }
+
+    .heading-1 p,
+    .heading-2 p,
+    .content-1 p{
+        line-height: 22px;
+       
+
+    }
+    
+    
+    
+    
+}
+
+
+            /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            [                                                            ]
+            [                      FOR DESKTOP RESPONSIVE                ]
+            [                                                            ]
+            ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+
+@media screen and (min-width: 1366px){
+
+    
+    .heading-1,
+    .heading-2,
+    .content-1,
+    .box-1, .box-2, .box-3, .box-4, .box-5{
+        width: 100%;
+        margin-bottom: 0;
+    }
+    
+ 
+    
+    .main-content{
+        width: 80%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 250px 300px 300px 250px;
+        grid-gap: 5px;
+        grid-template-areas: 
+        "head1 head1 head2 head2"
+        "main1 main1 main1 main2"
+        "main3 main3 main4 main4"
+        "foot1 foot1 foot2 foot2 ";
+    }
+    
+    .heading-1{
+        grid-area: head1;
+        height: 250px;
+        padding: 35px 20px 40px 20px;
+    }
+ 
+    .content-1{
+        grid-area: head2;
+        height: 250px;
+        padding: 35px 20px 40px 20px;
+    }
+      
+    
+
+    .box-1{
+        grid-area: main1;
+        align-self: center;
+        height: 300px;
+        padding: 0;
+    
+    }
+    
+    .box-2{
+        grid-area: main2;
+        height: 300px;
+        padding: 0;
+        
+    }
+    
+    .heading-2{
+        grid-area: main3;
+        height: 300px;
+        padding: 50px 20px 50px 20px;
+        
+    }
+    
+    .box-3{
+        grid-area: main4;
+        height: 300px;
+        align-self: center;
+        padding: 0;
+    }
+    
+    
+    .box-4{
+        grid-area: foot1;
+        align-self: center;
+        height: 250px;
+        padding: 0;
+    }
+
+    .box-5{
+        grid-area: foot2;
+        align-self: center;
+        height: 250px;
+        padding: 0;
+    }
+    
+    
+    .hambugermenu{
+        display: none;
+    }
+    .desktop-menu{
+        display: block;
+        margin-top: 10px;
+        position: absolute;
+        right: 4%;
+       
+
+    }
+
+    
+    .desktop-menu ul li{
+        display: inline-block;
+        width: 150px;
+        margin-left: 4px;
+        height: 40px;
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+        border-right: .5px solid white;
+        left: 40%;
+        
+        
+    }
+    
+    .desktop-menu ul li a{
+        color: white;
+        padding: 5px;
+    }
+    
+    .desktop-menu ul li a:hover{
+        color: aquamarine;
+    }
+    
+    .center-logo{
+    
+        position: absolute;
+        left: 1%;
+        margin-top: 10px;
+        
+    }
+    
+    .search-top{
+        position: absolute;
+        right: 1%;
+        top: 3%;
+        font-size: 1.2rem;
+       
+    }
+    
+    .search-top input{
+        background: none;
+        
+    }
+    .search-top input::placeholder{
+        color: white;
+    }
+    
+    .subtitle{
+        width: 50%;
+    }
+    
+    .box-1:hover .subtitle{
+    left: 15%;
+
+}
+
+    .box-2:hover .subtitle{
+       left: 15%;
+
+    }
+
+
+    .box-3:hover .subtitle{
+      left: 15%;
+
+    }
+
+    .box-4:hover .subtitle{
+       left: 15%;
+
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.main-content-1,
+.main-content-2{
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: #232323;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.content-1-text h1,
+.content-2-text h1{
+    font-family: 'Arapey', serif;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    text-align: center;
+    padding: 10px;
+    
+}
+
+.content-1-text p,
+.content-2-text p{
+    font-size: 1em;
+    line-height: 1.2em;
+    text-align: justify;
+    padding: 15px;
+    margin-bottom: 5px;
+    
+}
+
+.content-1-text h2,
+.content-2-text h2{
+    font-family: 'Arapey', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    padding: 10px;
+    text-align: center;
+}
+
+.content-1-images,
+.content-2-images{
+    margin: 0 auto;
+    padding: 5px;
+     margin-bottom: 2px;
+}
+
+
+
+.content-1-images img:hover,
+.content-2-images img:hover{
+    filter: grayscale(1);
+    opacity: .8;
+    transform: scale(1.2);
+    transition: 1s ease-in;
+}
+.banner-image,
+.images-1,
+.images-2,
+.images-3,
+.images-4{
+    box-sizing: border-box;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 3px;
+}
+
+.images-5{
+    box-sizing: border-box;
+    margin-bottom: 2px;
+    overflow: hidden; 
+    margin: 0 auto;
+    padding: 5px;
+  
+    
+}
+
+.images-5 img{
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    
+}
+
+.sub-5{
+    display: flex;
+    align-content: center;
+    position: absolute;
+    margin: 0 auto;
+    color: white;
+    font-size: 12px;
+    padding: 10px;
+    vertical-align: middle;
+    line-height: 16px;
+    width: 90%;
+    left: 5%;
+}
+
+.sub-5 h1{
+    font-family: 'Arapey', serif;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.sub-5 span:before{
+    content: "\f2bd";
+    margin-right: 20px;
+    opacity: .7;
+    margin-top: 35px;
+    font-family: "Font Awesome 5 Free"; 
+    font-size: 3em;
+    font-weight: 900; 
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    display: inline-block;
+    font-family: "Font Awesome 5 Free"; 
+    -webkit-font-smoothing: antialiased;
+    
+}
+
+footer{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background: #0E4460;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+
+footer ul{
+    margin: 0 auto;
+    text-align: center;
+}
+footer ul li{
+    display: inline-block;
+    box-sizing: border-box;
+    margin-right: 10px;
+    padding: 10px;
+    margin-top: 20px
+    font-family: "Avenir Next", "Avenir", sans-serif;
+    font-weight: 200;
+    font-size: .7em;
+
+}
+
+footer ul li a{
+     color: white;
+}
+
+.footer-logo img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin: 0 auto;
+
+}
+
+footer p{
+    font-family: "Avenir Next", "Avenir", sans-serif;
+    font-weight: 200;
+    text-align: center;
+    font-size: .7em;
+    padding: 20px;
+   
+}
+
+.subcribe{
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 10px;
+    
+    
+}
+
+.subcribe input[type="email"]{
+    width: 200px;
+    height: 30px;
+    background: transparent;
+    border: .2px solid white;
+    
+}
+
+.subcribe input::placeholder{
+    color: white;
+    text-align: center;
+    font-family: "Avenir Next", "Avenir", sans-serif;
+    font-weight: 200;
+    
+}
+
+.subcribe input[type="submit"]{
+    width: 90px;
+    height: 30px;
+    background: red;
+    color: white;
+    font-family: "Avenir Next", "Avenir", sans-serif;
+    font-weight: 400;
+    font-size: .8em;
+    text-transform: uppercase;
+    border: none;
+}
+
+
+@media screen and (min-width: 768px){
+    
+.images-1,
+.images-2,
+.images-3,
+.images-4{
+    height: 300px;
+    
+    }
+    
+    .banner-image{
+        height: 480px;
+
+    }
+    
+    .banner-content{
+        top: 35%;
+    }  
+    
+ 
+    
+    
+    .footer-logo{
+       align-self: center;
+    }
+    
+    .subcribe{
+        align-items: center;
+    }
+    
+    
+
+}
+    
+    
+
+@media screen and (min-width: 1200px){
+    
+    
+    .hambugermenu{
+        display: none;
+    }
+    .desktop-menu{
+        display: block;
+        margin-top: 10px;
+        position: absolute;
+        right: 4%;
+       
+
+    }
+
+    
+    .desktop-menu ul li{
+        display: inline-block;
+        width: 150px;
+        margin-left: 4px;
+        height: 40px;
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+        border-right: .5px solid white;
+        left: 40%;
+        
+        
+    }
+    
+    .desktop-menu ul li a{
+        color: white;
+        padding: 5px;
+    }
+    
+    .desktop-menu ul li a:hover{
+        color: aquamarine;
+    }
+    
+    .center-logo{
+    
+        position: absolute;
+        left: 1%;
+        margin-top: 10px;
+        
+    }
+    
+    .search-top{
+        position: absolute;
+        right: 1%;
+        top: 3%;
+        font-size: 1.2rem;
+       
+    }
+    
+    .search-top input{
+        background: none;
+        
+    }
+    .search-top input::placeholder{
+        color: white;
+    }
+    
+    
+    .content-1-text{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .content-1-text h1{
+        align-content: flex-start;
+    }
+    
+    .content-1-text p{
+        align-items: flex-end;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
+
+
+*/
+
+
+
